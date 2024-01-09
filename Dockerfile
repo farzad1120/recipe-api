@@ -1,5 +1,5 @@
 FROM python:3.9-alpine3.13
-
+LABEL
 LABEL maintainer="tiatech.eu"
 
 ENV PYTHONBUFFERED 1
@@ -10,10 +10,10 @@ WORKDIR ./app
 
 EXPOSE 8000
 
-RUN python -venv /py && \
+RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /tmp/requirements.txt && \
-    rm -rm /tmp && \
+    rm -rf /tmp && \
     adduser \
         --disabled-password \
         --no-create-home \
