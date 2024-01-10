@@ -11,8 +11,6 @@ jobs:
       - name: Check Docker Credentials1
         run: echo ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Check Docker Credentials2
-        run: echo ${{ dev.DOCKERHUB_TOKEN }}
-      - name: Check Docker Credentials3
         run: echo ${{ env.DOCKERHUB_TOKEN }}
       - name: Check Docker Credentials4
         run: echo ${{ env.dev.DOCKERHUB_TOKEN }}
