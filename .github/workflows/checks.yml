@@ -12,8 +12,6 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Check Docker Credentials2
         run: echo ${{ env.secrets.DOCKERHUB_TOKEN }}
-      - name: Check Docker Credentials4
-        run: echo ${{ env.dev.secrets.DOCKERHUB_TOKEN }}
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
